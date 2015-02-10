@@ -152,6 +152,11 @@
       (finally
         (.close ra-file)))))
 
+(defn sort-series
+  "Sort series by time."
+  [series]
+  (sort #(compare (first %1) (first %2)) series))
+
 (defn get-paths
   "Get paths."
   [dir]
