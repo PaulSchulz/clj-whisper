@@ -1,4 +1,4 @@
-(defproject clj-whisper "0.1.0"
+(defproject clj-whisper "0.2.0"
   :description "A library for reading Whisper database files from Clojure."
   :url "https://github.com/cybem/clj-whisper"
   :license {:name "MIT License"
