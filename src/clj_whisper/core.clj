@@ -157,6 +157,11 @@
   [series]
   (sort #(compare (first %1) (first %2)) series))
 
+(defn remove-nulls
+  "Remove null time points from series."
+  [series]
+  (remove #(= (first %) 0) series))
+
 (defn get-paths
   "Get paths."
   [dir]
