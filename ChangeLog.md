@@ -2,6 +2,7 @@
 
 This is a maintenance release.
 
+* Clojure 1.7.0
 * Add the changelog file
 * Add the Jarkeeper badge
 * Add TravisCI support
