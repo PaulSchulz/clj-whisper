@@ -1,3 +1,7 @@
+## 0.2.3
+
+* Added more details to README.md
+
 ## 0.2.2
 
 This is a maintenance release.

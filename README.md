@@ -11,45 +11,68 @@ A library for reading Whisper database files from Clojure
 # How to use it
 ```clojure
 (ns your-package
-  (:require [clj-whisper.core :as clj-whisper]))
+  (:require [clj-whisper.core :as whisper]))
 ```
 
 # Interface to Whisper files
 
-## (create)
+## (whisper-create)
 Not Implemented
 
-## read-info (info)
+## read-info (whisper-info)
 ```clojure
-  (clj-whisper/read-info filename)
+  (whisper/read-info filename)
 ```
 
-## (diff)
+## (whisper-diff)
 Not Implemented
 
-## (merge)
+## (whisper-merge)
 Not Implemented
 
-## (dump)
+## (whisper-dump)
 Not Implemented
 
-## (resize)
+## (whiusper-resize)
 Not Implemented
 
-## fetch-archive-seq (fetch)
+## fetch-archive-seq (whisper-fetch)
+```clojure
+(whisper/fetch-archive-seq filename archive from-time until-time)
+```
+archive - these are the archive details obtained from 'read-info'. A
+  Whisper file can contain multiple archives.
+```clojure
+(-> (whisper/read-info filename) :archives first)
+  {:offset 40,
+   :seconds-per-point 1,
+   :points 86400,
+   :retention 86400N,
+   :size 1036800N}
 
-## (set-aggregation-method)
+(def archive (-> (whisper/read-info filename) :archives first))
+   
+```
+
+from-time until-time
+```clojure
+(fetch-archive-seq filename archive 0 1487769175)
+```
+## (whisper-set-aggregation-method)
 Not Implemented
 
-## (fill)
+## (whisper-fill)
+Not Implemented
 
-## (update)
+## (whisper-update)
+Not Implemented
 
 # Utilities
 
 ## sort-series
 
 ## remove-nulls
+Remove null time points from series.
 
 ## get-paths
 
