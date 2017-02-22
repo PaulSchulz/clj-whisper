@@ -40,6 +40,9 @@ Not Implemented
 ```clojure
 (whisper/fetch-archive-seq filename archive from-time until-time)
 ```
+
+filename - Name of Whisper data file (.wsp)
+
 archive - these are the archive details obtained from 'read-info'. A
   Whisper file can contain multiple archives.
 ```clojure
